@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
+// import { withBase } from 'vitepress'
 
 const props = defineProps<{
-  iconSrc: string
+  iconSrc?: string
   href: string
 }>()
 </script>
