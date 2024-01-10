@@ -24,6 +24,14 @@ tags:
 
 ## 提示
 
+
+```markdown
+::: info 后果须知
+
+请注意，如果你需要使用 HSBC HK 的电子账单或者账单作为英文地址的证明，请再三思考后再决定是否需要这样修改，因为修改之后想要删除或者变更为英文地址的时候就只能通过寄信说明或者线下前往 HSBC HK 并在柜台完成修改地址的操作了。
+
+:::
+```
 可以使用 `danger`,`warning`,`info`来设置样式
 
 ::: info 后果须知
@@ -34,6 +42,16 @@ tags:
 
 
 ## 引用
+
+```markdown
+> 您准备好保安编码器或流动保安编码，然后按照以下步骤更改您的中文通讯地址：
+>
+> - 登录网上理财
+> - 在主页顶部选单选择“理财”
+> - 在“个人设置”下选择“更新个人资料”
+> - 在左边菜单栏选择“更新中文通讯地址（只限于中国内地或台湾）”
+```
+示例
 
 > 您准备好保安编码器或流动保安编码，然后按照以下步骤更改您的中文通讯地址：
 >
@@ -100,9 +118,11 @@ sudo lsof /var/lib/dpkg/lock-frontend
 
 ### 超链接
 
-官方网站：\[Mermaid](https://mermaid.js.org/)
-开源 GitHub 仓库：\[mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
-
+```markdown
+[mermaid-js/mermaid](https://github.com/mermaid-js/mermaid)
+```
+示例
+[Mermaid](https://mermaid.js.org/)
 ### 图片
 
 ```markdown

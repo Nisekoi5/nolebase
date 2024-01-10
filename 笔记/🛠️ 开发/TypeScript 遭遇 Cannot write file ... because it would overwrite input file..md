@@ -13,7 +13,7 @@ tags:
 
 ## 背景
 
-搭建 [[Nolebase|Nólëbase]] 插件的 Monorepo 的过程中，在配置好 `vue-tsc --declaration --emitDeclarationOnly` 命令来输出类型定义的时候遇到了一个奇怪的问题：
+搭建 [Nólëbase](https://github.com/nolebase/nolebase) 插件的 Monorepo 的过程中，在配置好 `vue-tsc --declaration --emitDeclarationOnly` 命令来输出类型定义的时候遇到了一个奇怪的问题：
 
 ```shell
 ❯ nr
