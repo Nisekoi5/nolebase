@@ -18,7 +18,7 @@ tags:
 
 运行以下命令查看生成的公钥
 `gpg --list-keys --keyid-format=long`
-记录下ID
+记录下ID(sec或pub后的16进制字符串)
 使用命令`gpg --armor --export ID`
 导出PGP PUBLIC KEY BLOCK
 将输出内容注册到Github上
