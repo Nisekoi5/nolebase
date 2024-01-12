@@ -89,7 +89,7 @@ const ExtendedTheme: Theme = {
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {
-        defaultMode: NolebaseEnhancedReadabilitiesLayoutMode.FullWidth,
+        defaultMode: NolebaseEnhancedReadabilitiesLayoutMode.Original,
       },
       spotlight: {
         defaultToggle: true,
