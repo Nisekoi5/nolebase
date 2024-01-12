@@ -69,7 +69,7 @@ export default defineConfig({
     outline: { label: '页面大纲', level: 'deep' },
     darkModeSwitchLabel: '切换主题',
     editLink: {
-      pattern: 'https://github.com/nolebase/nolebase/tree/main/:path',
+      pattern: 'https://github.com/Nisekoi5/nolebase/tree/main/:path',
       text: '编辑本页面',
     },
     socialLinks: [{ icon: 'github', link: githubRepoLink }],
