@@ -20,16 +20,19 @@ const props = defineProps<{
         <div flex="~ col" p="4 <sm:2">
             <div flex="~ col 1">
                 <div pb-2 flex="~ items-baseline">
-                    <div text="2xl <sm:lg" font-semibold>
-                        <slot name="name">
-                            {{ props.title }}
-                        </slot>
+                    <div>
+                        <span text="2xl <sm:lg" font-semibold>
+                            <slot name="name">
+                                {{ props.title }}
+                            </slot>
+                        </span>
+                        <span pl-1>
+                            <slot name="creator">
+                                {{ props.creator }}
+                            </slot>
+                        </span>
                     </div>
-                    <div pl-1>
-                        <slot name="creator">
-                            {{ props.creator }}
-                        </slot>
-                    </div>
+
                 </div>
                 <div text-sm line-clamp-5>
                     <slot name="describe">
