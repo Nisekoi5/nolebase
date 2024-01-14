@@ -46,3 +46,8 @@ const props = defineProps<{
         </div>
     </div>
 </template>
+<style scoped>
+img {
+    width: 100%;
+}
+</style>
