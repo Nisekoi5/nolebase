@@ -26,8 +26,8 @@ devDependencies:
     specifier: 1.11.2
     version: 1.11.2(markdown-it@13.0.2)
   '@nolebase/markdown-it-element-transform':
-    specifier: ^1.12.0
-    version: 1.12.0(markdown-it@13.0.2)
+    specifier: 1.11.2
+    version: 1.11.2(markdown-it@13.0.2)
   '@nolebase/vitepress-plugin-enhanced-readabilities':
     specifier: ^1.12.0
     version: 1.12.0(vitepress@1.0.0-rc.34)(vue@3.4.3)
@@ -1394,8 +1394,8 @@ packages:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/markdown-it-element-transform@1.12.0(markdown-it@13.0.2):
-    resolution: {integrity: sha512-s5k1yOuFZ0UwDeJP900F6FNNWoHYhuwHJIllj830J/wYWkOTSJjAWGXGt7HP8Dzd0DtW9YGgrh4P7BiSByXfnA==}
+  /@nolebase/markdown-it-element-transform@1.11.2(markdown-it@13.0.2):
+    resolution: {integrity: sha512-eeFTLTpDpNk2S1IU/pip8/brHf0l2iFBjoTihVVHkpqaasizn43O2zOyrOANQhKaXc41BQcvCRaE3zwPGjeRaQ==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
