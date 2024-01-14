@@ -1,7 +1,9 @@
 @import 'kbd.css';
 
-html, body {
-  -webkit-tap-highlight-color: transparent; /* 避免触屏下的点击高亮颜色 */
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+  /* 避免触屏下的点击高亮颜色 */
 }
 
 /* 参考 Vitest */
@@ -91,56 +93,58 @@ html, body {
 }
 
 /* 首页标题样式 */
-.VPHomeHero > .container > .main > h1 {
+.VPHomeHero>.container>.main>h1 {
   font-size: 5rem;
   font-family: 'tengwarannatar-bold';
 }
 
 /* 首页子标题样式 */
-.VPHomeHero > .container > .main > .text {
+.VPHomeHero>.container>.main>.text {
   padding-top: 45px;
   font-size: 4rem;
 }
 
 /* 首页介绍样式 */
-.VPHomeHero > .container > .main > .tagline {
+.VPHomeHero>.container>.main>.tagline {
   padding-top: 24px;
 }
 
 /* 自适应样式 */
 @media (max-width: 1024px) {
+
   /* 首页标题样式 */
-  .VPHomeHero > .container > .main > h1 {
+  .VPHomeHero>.container>.main>h1 {
     font-size: 3.5rem;
   }
 
   /* 首页子标题样式 */
-  .VPHomeHero > .container > .main > .text {
+  .VPHomeHero>.container>.main>.text {
     padding-top: 30px;
     font-size: 3rem;
   }
 
   /* 首页介绍样式 */
-  .VPHomeHero > .container > .main > .tagline {
+  .VPHomeHero>.container>.main>.tagline {
     padding-top: 20px;
   }
 }
 
 /* 自适应样式 */
 @media (max-width: 640px) {
+
   /* 首页标题样式 */
-  .VPHomeHero > .container > .main > h1 {
+  .VPHomeHero>.container>.main>h1 {
     font-size: 2.5rem;
   }
 
   /* 首页子标题样式 */
-  .VPHomeHero > .container > .main > .text {
+  .VPHomeHero>.container>.main>.text {
     padding-top: 20px;
     font-size: 2rem;
   }
 
   /* 首页介绍样式 */
-  .VPHomeHero > .container > .main > .tagline {
+  .VPHomeHero>.container>.main>.tagline {
     padding-top: 20px;
   }
 }
@@ -174,7 +178,7 @@ html, body {
 }
 
 /* 脚注 */
-.footnotes > .footnotes-list {
+.footnotes>.footnotes-list {
   margin-top: 32px;
   opacity: 0.9;
   font-size: 12px;
@@ -182,12 +186,12 @@ html, body {
   font-family: sans-serif;
 }
 
-.footnotes > .footnotes-list > .footnote-item > p {
+.footnotes>.footnotes-list>.footnote-item>p {
   line-height: 18px;
 }
 
 /* 覆盖正文的 h1 标题样式 */
-.vp-doc > div > h1 {
+.vp-doc>div>h1 {
   margin-bottom: 16px;
 }
 
@@ -198,4 +202,9 @@ html, body {
 
 .vp-doc a:hover {
   text-decoration: underline;
+}
+
+
+img {
+  object-fit: cover;
 }
