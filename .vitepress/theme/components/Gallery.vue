@@ -5,6 +5,7 @@ const props = defineProps<{
     creator: string
     title?: string
     describe: string
+    linkText?: string
 }>()
 
 </script>
@@ -41,7 +42,7 @@ const props = defineProps<{
                 bg="zinc-50 dark:zinc-700 hover:white  dark:hover:zinc-600 active:zinc-50 dark:active:zinc-700"
                 transition="all 200 ease" mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
                 target="_blank">
-                <span class="i-ic:outline-arrow-outward" /> View
+                <span class="i-ic:outline-arrow-outward" /> {{ props.linkText ?? 'View' }}
             </a>
         </div>
     </div>
