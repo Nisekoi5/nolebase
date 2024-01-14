@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@nolebase/markdown-it-bi-directional-links':
-    specifier: ^1.12.0
-    version: 1.12.0(markdown-it@13.0.2)
+    specifier: 1.11.2
+    version: 1.11.2(markdown-it@13.0.2)
   '@nolebase/markdown-it-element-transform':
     specifier: ^1.12.0
     version: 1.12.0(markdown-it@13.0.2)
@@ -1385,8 +1385,8 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@nolebase/markdown-it-bi-directional-links@1.12.0(markdown-it@13.0.2):
-    resolution: {integrity: sha512-6UA8GJ9LNROE5imDt6iK85+nGIaIc8+M/QKJDjcAGE7azO2r1fOHDdjt7W1Jsr72YIyDLxUxkBQ8bhRyaxcKlw==}
+  /@nolebase/markdown-it-bi-directional-links@1.11.2(markdown-it@13.0.2):
+    resolution: {integrity: sha512-JmzDpZiAIATKzTOkqfghahYnNAEMYHSE9Jeea3KchL6sTEIgL+S957c/jj+X1c/pFpNjrjbhdxb/Teq2Eiy7OA==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
