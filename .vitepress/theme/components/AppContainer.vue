@@ -18,7 +18,8 @@ const props = defineProps<{
           <slot name="name" />
         </div>
         <div text-sm>
-          <span>by</span><slot name="by" />
+          <!-- <span>by</span> -->
+          <slot name="by" />
         </div>
       </div>
       <a
