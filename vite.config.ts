@@ -1,3 +1,4 @@
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import process from 'node:process'
@@ -54,6 +55,7 @@ export default defineConfig(async () => {
         dts: '.vitepress/components.d.ts',
       }),
       UnoCSS(),
+      vueJsx()
     ],
     ssr: {
       noExternal: [

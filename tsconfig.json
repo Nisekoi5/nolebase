@@ -10,6 +10,7 @@
     "strict": true,
     "esModuleInterop": true,
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "skipLibCheck": true,
     "isolatedModules": true,
     "moduleResolution": "Bundler",
@@ -21,7 +22,7 @@
     "types": [
       "vite/client",
       "vue/ref-macros"
-    ]
+    ],
   },
   "include": [
     "**/*.ts",
