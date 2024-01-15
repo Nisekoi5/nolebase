@@ -4,7 +4,7 @@ const props = defineProps<{
     href?: string
     creator: string
     title?: string
-    describe: string
+    describe?: string
     linkText?: string
 }>()
 
@@ -34,10 +34,10 @@ const props = defineProps<{
                     </div>
 
                 </div>
-                <div text-sm line-clamp-5>
-                    <slot name="describe">
-                        {{ props.describe }}
-                    </slot>
+                <div text-sm line-clamp-5 whitespace-pre-line>
+                        <slot name="describe">
+                            {{ props.describe }}
+                        </slot>
                 </div>
             </div>
             <a :href="props.href" class="hover:no-underline! "
