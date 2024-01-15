@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-    posterSrc?: string
+    image?: string
     href?: string
     creator: string
     title?: string
@@ -14,7 +14,7 @@ const props = defineProps<{
     <div bg="zinc-100 dark:zinc-800 " flex="~ <sm:wrap" w-full rounded-xl p-4 mt-5>
         <div flex="~ shrink-0 <sm:grow-1 justify-center" w="40 <sm:100%" h="55 <sm:45" rounded overflow-hidden>
             <slot name="image">
-                <img :src="props.posterSrc" />
+                <img :src="props.image" />
             </slot>
         </div>
         <div flex="~ col" p="4 <sm:2">
