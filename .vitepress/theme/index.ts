@@ -37,7 +37,8 @@ import TagItem from './components/TagItem.vue'
 import Tags from './components/Tags.vue'
 import TocList from './components/TocList.vue'
 
-import Gallery from './components/Gallery.vue'
+import Gallery from './components/Gallery.tsx'
+import GalleryTsx from './components/Gallery2.tsx'
 
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/dist/style.css'
@@ -90,6 +91,7 @@ const ExtendedTheme: Theme = {
 
     app.component('AppContainer', AppContainer)
     app.component('Gallery', Gallery)
+    app.component('GalleryTsx', GalleryTsx)
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {

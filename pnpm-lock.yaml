@@ -75,6 +75,9 @@ devDependencies:
   '@unocss/reset':
     specifier: ^0.54.3
     version: 0.54.3
+  '@unocss/transformer-attributify-jsx':
+    specifier: ^0.57.7
+    version: 0.57.7
   '@vue-flow/background':
     specifier: ^1.2.0
     version: 1.2.0(@vue-flow/core@1.27.1)
@@ -2141,8 +2144,8 @@ packages:
       - supports-color
     dev: false
 
-  /@vitejs/plugin-vue@5.0.2(vite@5.0.10)(vue@3.4.3):
-    resolution: {integrity: sha512-kEjJHrLb5ePBvjD0SPZwJlw1QTRcjjCA9sB5VyfonoXVBxTS7TMnqL6EkLt1Eu61RDeiuZ/WN9Hf6PxXhPI2uA==}
+  /@vitejs/plugin-vue@5.0.3(vite@5.0.10)(vue@3.4.3):
+    resolution: {integrity: sha512-b8S5dVS40rgHdDrw+DQi/xOM9ed+kSRZzfm1T74bMmBDCd8XO87NKlFYInzCtwvtWwXZvo1QxE2OSspTATWrbA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
@@ -6259,7 +6262,7 @@ packages:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2
       '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 5.0.2(vite@5.0.10)(vue@3.4.3)
+      '@vitejs/plugin-vue': 5.0.3(vite@5.0.10)(vue@3.4.3)
       '@vue/devtools-api': 6.5.1
       '@vueuse/core': 10.7.1(vue@3.4.3)
       '@vueuse/integrations': 10.7.1(focus-trap@7.5.4)(vue@3.4.3)
