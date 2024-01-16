@@ -68,6 +68,7 @@ const ExtendedTheme: Theme = {
     })
   },
   enhanceApp({ app }) {
+    // app.config.compilerOptions.whitespace = 'condense'
     app.component('HomePage', HomePage)
     app.component('DocFooter', DocFooter)
     app.component('Share', Share)
