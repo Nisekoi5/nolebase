@@ -74,6 +74,7 @@
     "vuedraggable": "^4.1.0"
   },
   "dependencies": {
+    "@unocss/preset-attributify": "^0.58.3",
     "@vitejs/plugin-vue-jsx": "^3.1.0"
   }
 }
