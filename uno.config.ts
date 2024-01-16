@@ -1,4 +1,5 @@
 import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx'
 
 export default defineConfig({
   shortcuts: [
@@ -20,4 +21,7 @@ export default defineConfig({
       warn: true,
     }),
   ],
+  transformers: [
+    transformerAttributifyJsx()
+  ]
 })

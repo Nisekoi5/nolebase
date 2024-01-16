@@ -39,6 +39,7 @@
     "@types/qs": "^6.9.11",
     "@unocss/eslint-config": "^0.55.7",
     "@unocss/reset": "^0.54.3",
+    "@unocss/transformer-attributify-jsx": "^0.57.7",
     "@vue-flow/background": "^1.2.0",
     "@vue-flow/core": "^1.27.1",
     "@vue-flow/minimap": "^1.2.0",
@@ -74,7 +75,6 @@
     "vuedraggable": "^4.1.0"
   },
   "dependencies": {
-    "@unocss/preset-attributify": "^0.58.3",
     "@vitejs/plugin-vue-jsx": "^3.1.0"
   }
 }

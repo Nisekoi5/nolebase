@@ -1,4 +1,5 @@
-import { defineComponent, SlotsType } from 'vue'
+import { defineComponent, SlotsType, Text } from 'vue'
+
 import type { VNode } from 'vue'
 export default defineComponent({
     props: {
@@ -37,10 +38,14 @@ export default defineComponent({
         const reg = /^\s+/
         const renderSlot = (vnodes: VNode[]) => {
             vnodes.forEach((vnode) => {
-                console.log(vnode)
-                if (typeof vnode.children == 'string') {
-                    vnode.children = vnode.children.replace(reg, '')
+                // console.log(vnode)
+                if (vnode.type === Text) {
+                    // 替换掉直接文本节点的首个换行符
+                    vnode.children = (vnode.children as string).replace(reg, '')
+                } else if (vnode.type == '') {
+                    // '做些别的'
                 }
+
             })
             return vnodes
         }

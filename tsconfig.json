@@ -19,6 +19,7 @@
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
     "types": [
       "vite/client",
       "vue/ref-macros"
@@ -31,6 +32,6 @@
     "**/*.vue",
     ".vitepress/**/*.ts",
     ".vitepress/**/*.tsx",
-    ".vitepress/**/*.vue"
+    ".vitepress/**/*.vue",
   ]
 }
