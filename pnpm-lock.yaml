@@ -28,11 +28,11 @@ devDependencies:
     specifier: ^1.6.0
     version: 1.6.0
   '@nolebase/markdown-it-bi-directional-links':
-    specifier: 1.11.2
-    version: 1.11.2(markdown-it@13.0.2)
+    specifier: ^1.12.1
+    version: 1.12.1(markdown-it@13.0.2)
   '@nolebase/markdown-it-element-transform':
-    specifier: 1.11.2
-    version: 1.11.2(markdown-it@13.0.2)
+    specifier: ^1.12.1
+    version: 1.12.1(markdown-it@13.0.2)
   '@nolebase/vitepress-plugin-enhanced-readabilities':
     specifier: ^1.12.1
     version: 1.12.1(vitepress@1.0.0-rc.34)(vue@3.4.3)
@@ -1333,8 +1333,8 @@ packages:
       fastq: 1.16.0
     dev: true
 
-  /@nolebase/markdown-it-bi-directional-links@1.11.2(markdown-it@13.0.2):
-    resolution: {integrity: sha512-JmzDpZiAIATKzTOkqfghahYnNAEMYHSE9Jeea3KchL6sTEIgL+S957c/jj+X1c/pFpNjrjbhdxb/Teq2Eiy7OA==}
+  /@nolebase/markdown-it-bi-directional-links@1.12.1(markdown-it@13.0.2):
+    resolution: {integrity: sha512-z0eEwny0IJRs36qEyvX3bGBWq/bT+IQlZef6UCSR/dgA1dMWUPH0fSwovXW9tyXSqz04Hfu5lcFnbnF7Ow42Qg==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
@@ -1342,8 +1342,8 @@ packages:
       markdown-it: 13.0.2
     dev: true
 
-  /@nolebase/markdown-it-element-transform@1.11.2(markdown-it@13.0.2):
-    resolution: {integrity: sha512-eeFTLTpDpNk2S1IU/pip8/brHf0l2iFBjoTihVVHkpqaasizn43O2zOyrOANQhKaXc41BQcvCRaE3zwPGjeRaQ==}
+  /@nolebase/markdown-it-element-transform@1.12.1(markdown-it@13.0.2):
+    resolution: {integrity: sha512-sSiM1oxQj6cdveMGrHhOyKc6xixbUW/6Xre4pOE1ZE4QkpCIxxOW2670xCdpFztjfo9veBVwQ+YDFDbXFUXmiA==}
     peerDependencies:
       markdown-it: '>=13.0.1'
     dependencies:
