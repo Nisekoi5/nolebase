@@ -139,7 +139,7 @@ sudo lsof /var/lib/dpkg/lock-frontend
 ```html
 <Gallery title="SPY x FAMILY 間諜家家酒" creator="遠藤達哉" href="https://ani.gamer.com.tw/animeVideo.php?sn=28798" linkText="前往观看">
   <template #image>
-    <img src="./🪄 ACG//🎞️动画/assets/2022-間諜家家酒.jpg" />
+    <img src="./🪄ACG//🎞️动画/assets/2022-间谍家家酒.jpg" />
   </template>
    <template #describe>
 每一個人都擁有不想讓任何人看見得自己的一面―― 位在世界各國於檯面下進行激烈情報戰的時代。東國與西國已經維持了數十年的冷戰狀態。所屬西國情報局對東課 WISE 厲害的間諜〈黃昏〉，為了前往找尋被譽為是會威脅到東西國和平的危險人物，東國的國家統一黨總裁 唐納文・戴斯蒙德 所正在籌備的戰爭計畫，被賦予了一項極秘任務。其名稱為 Operation〈梟〉。內容講述「在一週內組建家庭，並潛入戴斯蒙德兒子所就讀的學校吧」。但是，他所遇到的「女兒」是會讀心的超能力者、「妻子」則是暗殺者！為了互相的利益而成為家庭，決定在隱藏真實身分的情況下共同生活的 3 人。世界的和平就託付即將發生一系列事件的暫定的家庭…？
@@ -149,18 +149,18 @@ sudo lsof /var/lib/dpkg/lock-frontend
 
 ::: tip
 
-所有的`插槽`和`prop`都有对应的同名属性，比如`image`插槽, 可以直接传递`image`到组件  
+大部分的`插槽`和`prop`都有对应的同名属性，比如`image`插槽, 可以直接传递`image`到组件  
 但是所有的属性都写到一行会导致很难修改和阅读，所以使用插槽扩展到多行
 
 ```html
-<Gallery image="./🪄 ACG//🎞️动画/assets/2022-間諜家家酒.jpg" >
+<Gallery image="./🪄ACG//🎞️动画/assets/2022-间谍家家酒.jpg" >
 ```
 
 :::
 
 <Gallery title="SPY x FAMILY 間諜家家酒" creator="遠藤達哉" href="https://ani.gamer.com.tw/animeVideo.php?sn=28798" linkText="前往观看" >
   <template #image>
-    <img src="./🪄 ACG//🎞️动画/assets/2022-間諜家家酒.jpg" />
+    <img src="./🪄ACG/🎞️动画/assets/2022-间谍家家酒.jpg" />
   </template>
    <template #describe>
 每一個人都擁有不想讓任何人看見得自己的一面―― 位在世界各國於檯面下進行激烈情報戰的時代。東國與西國已經維持了數十年的冷戰狀態。所屬西國情報局對東課 WISE 厲害的間諜〈黃昏〉，為了前往找尋被譽為是會威脅到東西國和平的危險人物，東國的國家統一黨總裁 唐納文・戴斯蒙德 所正在籌備的戰爭計畫，被賦予了一項極秘任務。其名稱為 Operation〈梟〉。內容講述「在一週內組建家庭，並潛入戴斯蒙德兒子所就讀的學校吧」。但是，他所遇到的「女兒」是會讀心的超能力者、「妻子」則是暗殺者！為了互相的利益而成為家庭，決定在隱藏真實身分的情況下共同生活的 3 人。世界的和平就託付即將發生一系列事件的暫定的家庭…？
