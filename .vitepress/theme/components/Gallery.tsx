@@ -38,7 +38,7 @@ export default defineComponent({
         const reg = /^\s+/
         const renderSlot = (vnodes: VNode[]) => {
             vnodes.forEach((vnode) => {
-                console.log(vnode)
+                // console.log(vnode)
                 if (vnode.type === Text) {
                     // 替换掉直接文本节点的首个换行符
                     vnode.children = (vnode.children as string).replace(reg, '')
