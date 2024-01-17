@@ -144,6 +144,7 @@ export default defineConfig({
         } as ElementTransformOptions
       })())
     },
+    image: { lazyLoading: true }
   },
   // vue: {
   //   template: {
