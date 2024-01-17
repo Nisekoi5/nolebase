@@ -26,6 +26,9 @@ export default defineComponent({
         linkText: {
             default: 'View', type: String
         },
+        spacePreLine: {
+            default: true, type: Boolean
+        }
     },
     slots: Object as SlotsType<{
         default?: () => any,
@@ -35,13 +38,21 @@ export default defineComponent({
         describe?: () => any
     }>,
     setup(props, { slots }) {
-        const reg = /^\s+/
+        const regxSpace = /(?!^ ) /mg
         const renderSlot = (vnodes: VNode[]) => {
+            // 如果spacePreLine为真则将空格替换为换行符
+            // 这个函数将插槽传递过来的被SFC编译掉的文本进行处理后返回
+            // 因为SFC编译后文本中的空格个换行符会被压缩成一个,修改compilerOptions会导致水和不匹配，也只能这样了
+            // 否则需要在使用该组件的时候每行后面增加一个<br>标签
+
+            if (!props.spacePreLine) return vnodes
+
             vnodes.forEach((vnode) => {
                 // console.log(vnode)
                 if (vnode.type === Text) {
-                    // 替换掉直接文本节点的首个换行符
-                    vnode.children = (vnode.children as string).replace(reg, '')
+                    console.log(vnode.children)
+                    // 除首个空格以外的空格替换为换行符
+                    vnode.children = (vnode.children as string).replace(regxSpace, '\n')
                 } else if (vnode.type == '') {
                     // '做些别的'
                 }

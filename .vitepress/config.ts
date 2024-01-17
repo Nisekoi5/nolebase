@@ -144,11 +144,12 @@ export default defineConfig({
         } as ElementTransformOptions
       })())
     },
-  }, vue: {
-    template: {
-      compilerOptions: {
-        whitespace: "preserve"
-      }
-    }
-  }
+  },
+  // vue: {
+  //   template: {
+  //     compilerOptions: {
+  //       whitespace: "preserve"
+  //     }
+  //   }
+  // }
 })
