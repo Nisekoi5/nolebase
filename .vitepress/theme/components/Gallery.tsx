@@ -84,7 +84,7 @@ export default defineComponent({
                     transition="all 200 ease"
                     mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
                     target="_blank">
-                    <span class="i-ic:outline-arrow-outward" />{props.linkText}
+                    <span class="i-ic:outline-arrow-outward"></span>{props.linkText}
                 </a>
             </div>
         </div>
