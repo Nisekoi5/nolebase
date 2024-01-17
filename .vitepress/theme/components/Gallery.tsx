@@ -42,11 +42,10 @@ export default defineComponent({
         const renderSlot = (vnodes: VNode[]) => {
             // 如果spacePreLine为真则将空格替换为换行符
             // 这个函数将插槽传递过来的被SFC编译掉的文本进行处理后返回
-            // 因为SFC编译后文本中的空格个换行符会被压缩成一个,修改compilerOptions会导致水和不匹配，也只能这样了
+            // 因为SFC编译后文本中的空格个换行符会被压缩成一个,修改compilerOptions会导致激活不匹配，也只能这样了
             // 否则需要在使用该组件的时候每行后面增加一个<br>标签
 
             if (!props.spacePreLine) return vnodes
-
             vnodes.forEach((vnode) => {
                 // console.log(vnode)
                 if (vnode.type === Text) {
@@ -75,20 +74,20 @@ export default defineComponent({
                                 {slots.creator ? renderSlot(slots.creator()) : props.creator}
                             </span>
                         </div>
-
                     </div>
                     <div text-sm line-clamp-5 whitespace-pre-line>
                         {slots.describe ? renderSlot(slots.describe()) : props.describe}
                     </div>
                 </div>
-                <a href={props.href} class="hover:no-underline! "
+                <a href={props.href} class="hover:no-underline!"
                     bg="zinc-50 dark:zinc-700 hover:white  dark:hover:zinc-600 active:zinc-50 dark:active:zinc-700"
-                    transition="all 200 ease" mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
+                    transition="all 200 ease"
+                    mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
                     target="_blank">
-                    <span class="i-ic:outline-arrow-outward" /> {props.linkText}
+                    <span class="i-ic:outline-arrow-outward" />{props.linkText}
                 </a>
             </div>
-        </div >
+        </div>
     },
 
 })
