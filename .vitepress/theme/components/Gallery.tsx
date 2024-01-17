@@ -49,7 +49,7 @@ export default defineComponent({
             vnodes.forEach((vnode) => {
                 // console.log(vnode)
                 if (vnode.type === Text) {
-                    console.log(vnode.children)
+                    // console.log(vnode.children)
                     // 除首个空格以外的空格替换为换行符
                     vnode.children = (vnode.children as string).replace(regxSpace, '\n')
                 } else if (vnode.type == '') {
