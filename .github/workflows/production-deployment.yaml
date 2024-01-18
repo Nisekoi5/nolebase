@@ -5,6 +5,9 @@ on:
     branches:
       - 'main'
 
+env:
+  STORE_PATH: ''
+
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true

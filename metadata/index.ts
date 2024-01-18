@@ -7,7 +7,10 @@ export const siteDescription = '记录回忆，知识和畅想的地方'
 export const include = ['笔记', '生活']
 
 /** Repo */
-export const githubRepoLink = 'https://github.com/nolebase/nolebase'
+export const githubRepoLink = 'https://github.com/Nisekoi5/nolebase'
+
+/** 无协议前缀域名 */
+export const plainTargetDomain = 'nolebase.ayaka.io'
+export const targetDomain = `https://${plainTargetDomain}`
 
 /** 社交媒体 */
-// ...
