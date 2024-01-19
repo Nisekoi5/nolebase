@@ -70,7 +70,7 @@ export default defineComponent({
                             <span text="2xl <sm:lg" font-semibold>
                                 {slots.title ? renderSlot(slots.title()) : props.title}
                             </span>
-                            <span pl-1>
+                            <span pl-1 text="base">
                                 {slots.creator ? renderSlot(slots.creator()) : props.creator}
                             </span>
                         </div>
