@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// import { withBase } from 'vitepress'
-
 const props = defineProps<{
   iconSrc?: string
   href: string
@@ -8,8 +6,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div bg="zinc-100 dark:zinc-800" w-full flex rounded-xl p-4>
-    <div flex="~ shrink-0" max-h-40 max-w-40 w="<sm:30%" justify-center>
+  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full  rounded-xl p-4>
+    <div flex="~" h-30 min-w-30 w-30 justify-center>
       <slot name="image" />
     </div>
     <div flex="~ col" p="5 <sm:2">
@@ -18,7 +16,7 @@ const props = defineProps<{
           <slot name="name" />
         </div>
         <div text-sm line-clamp-3>
-          <!-- <span>by</span> -->
+          <span>by</span>
           <slot name="by" />
         </div>
       </div>
@@ -30,10 +28,3 @@ const props = defineProps<{
     </div>
   </div>
 </template>
-
-<style scoped>
-:slotted(img) {
-  object-fit: contain ;
-  /* width: 100% !important; */
-}
-</style>
