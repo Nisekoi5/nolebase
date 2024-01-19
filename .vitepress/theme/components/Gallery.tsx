@@ -26,7 +26,7 @@ export default defineComponent({
         linkText: {
             default: 'View', type: String
         },
-        spacePreLine: {
+        disableNewline: {
             default: true, type: Boolean
         }
     },
@@ -45,7 +45,7 @@ export default defineComponent({
             // 因为SFC编译后文本中的空格个换行符会被压缩成一个,修改compilerOptions会导致激活不匹配，也只能这样了
             // 否则需要在使用该组件的时候每行后面增加一个<br>标签
 
-            if (!props.spacePreLine) return vnodes
+            if (props.disableNewline) return vnodes
             vnodes.forEach((vnode) => {
                 // console.log(vnode)
                 if (vnode.type === Text) {
