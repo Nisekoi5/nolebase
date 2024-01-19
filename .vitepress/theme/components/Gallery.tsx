@@ -27,7 +27,7 @@ export default defineComponent({
             default: 'View', type: String
         },
         disableNewline: {
-            default: true, type: Boolean
+            default: false, type: Boolean
         }
     },
     slots: Object as SlotsType<{
