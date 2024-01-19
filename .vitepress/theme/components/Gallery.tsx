@@ -59,8 +59,8 @@ export default defineComponent({
             })
             return vnodes
         }
-        return () => <div bg="zinc-100 dark:zinc-800 " flex="~ <sm:wrap" w-full rounded-xl p-4 mt-5>
-            <div flex="~ shrink-0 <sm:grow-1 justify-center" w="40 <sm:100%" h="55 <sm:45" rounded overflow-hidden>
+        return () => <div bg="zinc-100 dark:zinc-800 " flex="~  items-stretch <sm:wrap" w-full rounded-xl p-4 mt-5>
+            <div flex="~ shrink-0 <sm:grow-1 justify-center" w="40 <sm:100%" max-h="<sm:45" rounded overflow-hidden>
                 {slots.image ? renderSlot(slots.image()) : <img src={props.image} />}
             </div>
             <div flex="~ col" p="4 <sm:2">
