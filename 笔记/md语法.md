@@ -109,7 +109,7 @@ sudo lsof /var/lib/dpkg/lock-frontend
 
 ### AppContainer
 ```html
-<AppContainer href="https://github.com/nolebase/nolebase">
+<AppContainer href="https://github.com/nolebase/nolebase" hideBy>
   <template #image>
     <img src="/android-chrome-192x192.png" />
   </template>
@@ -122,7 +122,7 @@ sudo lsof /var/lib/dpkg/lock-frontend
 </AppContainer>
 ```
 使用示例
-<AppContainer href="https://github.com/nolebase/nolebase">
+<AppContainer href="https://github.com/nolebase/nolebase" hideBy>
   <template #image>
     <img src="/android-chrome-192x192.png" />
   </template>

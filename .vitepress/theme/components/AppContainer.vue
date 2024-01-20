@@ -1,12 +1,16 @@
 <script setup lang="ts">
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   iconSrc?: string
   href: string
-}>()
+  hideBy: boolean
+}>(), {
+  hideBy: false
+})
+
 </script>
 
 <template>
-  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full  rounded-xl p-4>
+  <div bg="zinc-100 dark:zinc-800" flex="~ items-center" w-full rounded-xl p-4>
     <div flex="~" h-30 min-w-30 w-30 justify-center>
       <slot name="image" />
     </div>
@@ -16,7 +20,7 @@ const props = defineProps<{
           <slot name="name" />
         </div>
         <div text-sm line-clamp-3>
-          <span>by</span>
+          <span v-if="!props.hideBy">by</span>
           <slot name="by" />
         </div>
       </div>
