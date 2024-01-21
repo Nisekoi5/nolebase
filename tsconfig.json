@@ -1,29 +1,27 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "module": "ESNext",
     "target": "ESNext",
+    "jsx": "preserve",
     "lib": [
       "DOM",
       "ESNext"
     ],
-    "strict": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "skipLibCheck": true,
-    "isolatedModules": true,
+    "baseUrl": ".",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
+    "types": [
+      "vite/client"
+    ],
     "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
-    "types": [
-      "vite/client",
-      "vue/ref-macros"
-    ],
+    "isolatedModules": true,
+    "skipLibCheck": true
   },
   "include": [
     "**/*.ts",
