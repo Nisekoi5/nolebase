@@ -30,12 +30,7 @@
     "@nolebase/vitepress-plugin-git-changelog": "^1.20.1",
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^1.20.1",
     "@nolebase/vitepress-plugin-inline-link-preview": "^1.20.1",
-<<<<<<< HEAD
-    "@types/body-parser": "^1.19.5",
-    "@types/express": "^4.17.21",
-=======
     "@nolebase/vitepress-plugin-page-properties": "^1.20.1",
->>>>>>> b066ae1 (chore: update deps)
     "@types/fs-extra": "^11.0.4",
     "@types/lodash": "^4.14.202",
     "@types/markdown-it": "^12.2.3",
