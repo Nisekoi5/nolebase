@@ -99,6 +99,7 @@ const ExtendedTheme: Theme = {
     app.use(NolebaseGitChangelogPlugin)
     app.use(NolebasePagePropertiesPlugin<{
       tags: string[]
+      progress: number
     }>(), {
       properties: {
         'zh-CN': [
@@ -106,6 +107,11 @@ const ExtendedTheme: Theme = {
             key: 'tags',
             type: 'tags',
             title: '标签',
+          },
+          {
+            key: 'progress',
+            type: 'progress',
+            title: '完成进度',
           },
           {
             key: 'wordCount',
