@@ -59,15 +59,15 @@ export default defineComponent({
             })
             return vnodes
         }
-        return () => <div bg="zinc-100 dark:zinc-800 " flex="~  items-stretch <sm:wrap" w-full rounded-xl p-4 mt-5>
-            <div flex="~ shrink-0 <sm:grow-1 justify-center" w="40 <sm:100%" max-h="<sm:45" rounded overflow-hidden>
+        return () => <div bg="zinc-100 dark:zinc-800" flex="~ items-stretch lt-sm:wrap" w-full rounded-xl p-4 mt-5>
+            <div flex="~ shrink-0 lt-sm:grow-1 justify-center" w="40 lt-sm:100%" max-h="lt-sm:45" rounded overflow-hidden>
                 {slots.image ? renderSlot(slots.image()) : <img src={props.image} />}
             </div>
-            <div flex="~ col" p="4 <sm:2">
+            <div flex="~ col" p="4 lt-sm:2">
                 <div flex="~ col 1">
                     <div pb-2 flex="~ items-baseline">
                         <div>
-                            <span text="2xl <sm:lg" font-semibold>
+                            <span text="2xl lt-sm:lg" font-semibold>
                                 {slots.title ? renderSlot(slots.title()) : props.title}
                             </span>
                             <span pl-1 text="base">

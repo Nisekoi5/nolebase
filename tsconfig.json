@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "lib": [
       "DOM",
       "ESNext"
@@ -19,7 +20,7 @@
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": true,
+    // "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
