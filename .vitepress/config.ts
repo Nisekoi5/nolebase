@@ -54,7 +54,6 @@ export default defineConfig({
         },
         sidebar: calculateSidebar([
           { folderName: 'zh-CN/笔记', separate: true },
-          { folderName: 'zh-CN/编目 Catalog', separate: true },
         ], 'zh-CN'),
         footer: {
           message: '用 <span style="color: #e25555;">&#9829;</span> 撰写',
