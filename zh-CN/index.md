@@ -15,7 +15,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /笔记/index
+      link: /zh-CN/笔记/
     - theme: alt
       text: GitHub 上浏览
       link: https://github.com/nolebase/nolebase

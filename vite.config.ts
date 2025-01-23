@@ -1,12 +1,12 @@
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
 import { ThumbnailHashImages } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
-import JSX from '@vitejs/plugin-vue-jsx'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
 
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
-import Inspect from 'vite-plugin-inspect'
+// import Inspect from 'vite-plugin-inspect'
 
 import { creators, githubRepoLink } from './metadata'
 
@@ -22,7 +22,8 @@ export default defineConfig(async () => {
       ],
     },
     plugins: [
-      Inspect(),
+      // Inspect(),
+      vueJsx({}),
       GitChangelog({
         repoURL: () => githubRepoLink,
         mapAuthors: creators,
@@ -47,7 +48,7 @@ export default defineConfig(async () => {
         dts: '.vitepress/components.d.ts',
       }),
       UnoCSS(),
-      JSX()
+
     ],
     ssr: {
       noExternal: [

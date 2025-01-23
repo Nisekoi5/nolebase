@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@unocss/transformer-attributify-jsx':
+    specifier: ^65.4.3
+    version: 65.4.3
   '@vitejs/plugin-vue-jsx':
     specifier: ^4.1.1
     version: 4.1.1(vite@6.0.11)(vue@3.5.13)
@@ -2926,6 +2929,10 @@ packages:
     resolution: {integrity: sha512-a2JOoFutrhqd5RgPhIR5FIXrDoHDU3gwCbPrpT6KYTjsqlSc/fv02yZ+JGOZFN3MCFhCmaPTs+idDFtwb3xU8g==}
     dev: true
 
+  /@unocss/core@65.4.3:
+    resolution: {integrity: sha512-luFgdcchSlNrYSaDvU2176T2PPQZdxqfREVbxEXNXlFEgyEFrx5hOSUXoJtJSZjRhAcE6zkWyLDf/JkQJ5Eeyw==}
+    dev: false
+
   /@unocss/eslint-config@0.65.4(eslint@9.18.0)(typescript@5.7.3):
     resolution: {integrity: sha512-hw2fD6Nitl0BGP/tzpGfZZX/vdxbunZPm8wh2DNNtFaFpkgPyKTR1YIk+Td09EP7o6LMzOlL6709G6KXDxT5cg==}
     engines: {node: '>=14'}
@@ -3065,6 +3072,12 @@ packages:
     dependencies:
       '@unocss/core': 0.65.4
     dev: true
+
+  /@unocss/transformer-attributify-jsx@65.4.3:
+    resolution: {integrity: sha512-GI0joW6+jG3sLMzqDxT/Nr0lGarHKsXQzpKQt1LfBGEDgNSQZtDZ1IGlkdZeErRFvWcDLWU0xm2LikLS4Az8kw==}
+    dependencies:
+      '@unocss/core': 65.4.3
+    dev: false
 
   /@unocss/transformer-compile-class@0.65.4:
     resolution: {integrity: sha512-n1yHDC/iIbcj/9fBUTXkSoASKfLBuRoCN7P1a0ecPc8Gu+uOGfoxafOhrlqC+tpD3hlQGoL+0h74BHSKh+L23Q==}
