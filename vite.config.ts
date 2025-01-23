@@ -1,6 +1,7 @@
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
 import { ThumbnailHashImages } from '@nolebase/vitepress-plugin-thumbnail-hash/vite'
+import JSX from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
 
 import Components from 'unplugin-vue-components/vite'
@@ -46,6 +47,7 @@ export default defineConfig(async () => {
         dts: '.vitepress/components.d.ts',
       }),
       UnoCSS(),
+      JSX()
     ],
     ssr: {
       noExternal: [

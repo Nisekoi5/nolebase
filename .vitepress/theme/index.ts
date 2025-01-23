@@ -1,10 +1,10 @@
-import type { Theme } from 'vitepress'
 import {
   InjectionKey as NolebaseEnhancedReadabilitiesInjectionKey,
   LayoutMode as NolebaseEnhancedReadabilitiesLayoutMode,
   NolebaseEnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
+import type { Theme } from 'vitepress'
 
 import {
   NolebaseGitChangelogPlugin,
@@ -35,17 +35,18 @@ import { h } from 'vue'
 
 import AppContainer from './components/AppContainer.vue'
 import DocFooter from './components/DocFooter.vue'
+import Gallery from './components/Gallery'
 import HomePage from './components/HomePage.vue'
 import Share from './components/Share.vue'
 
+import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import '@nolebase/vitepress-plugin-index/client/style.css'
 import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
-import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 import '@nolebase/vitepress-plugin-thumbnail-hash/client/style.css'
-import '@nolebase/vitepress-plugin-enhanced-mark/client/style.css'
 
 import 'virtual:uno.css'
 
@@ -87,6 +88,7 @@ const ExtendedTheme: Theme = {
     app.component('Share', Share)
     app.component('AppContainer', AppContainer)
     app.component('NolebaseUnlazyImg', NolebaseUnlazyImg)
+    app.component('Gallery', Gallery)
 
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {
