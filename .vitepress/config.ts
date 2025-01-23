@@ -40,7 +40,6 @@ export default defineConfig({
         nav: [
           { text: '主页', link: '/zh-CN/' },
           { text: '笔记', link: '/zh-CN/笔记/' },
-          { text: '编目 Catalog', link: '/zh-CN/编目 Catalog/' },
           { text: '最近更新', link: '/zh-CN/toc' },
         ],
         socialLinks: [
