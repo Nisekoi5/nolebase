@@ -1,12 +1,8 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
-  iconSrc?: string
+const props = defineProps<{
+  iconSrc: string
   href: string
-  hideBy: boolean
-}>(), {
-  hideBy: false
-})
-
+}>()
 </script>
 
 <template>
@@ -19,14 +15,19 @@ const props = withDefaults(defineProps<{
         <div text="2xl <sm:lg" font-semibold>
           <slot name="name" />
         </div>
-        <div text-sm line-clamp-3>
-          <span v-if="!props.hideBy">by</span>
+        <div line-clamp-3 text-sm>
+          <span>by</span>
           <slot name="by" />
         </div>
       </div>
-      <a :href="props.href" class="hover:no-underline!"
+      <a
+        :href="props.href"
+        class="hover:no-underline!"
         bg="zinc-50 dark:zinc-700 hover:white dark:hover:zinc-600 active:zinc-50 dark:active:zinc-700"
-        transition="all 200 ease" mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm target="_blank">
+        transition="all 200 ease"
+        mt-2 block w-fit flex items-center rounded-lg p-2 text-xs shadow-sm
+        target="_blank"
+      >
         <span class="i-ic:outline-arrow-outward" /> View
       </a>
     </div>

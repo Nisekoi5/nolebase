@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d72f698081e75d33",
+        "id": "7bf25fa9b275a114",
         "type": "tabs",
         "children": [
           {
-            "id": "73a9b6ff1cd4f3ff",
+            "id": "54819aae3450e1a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "zh-CN/笔记/🤖 AI 人工智能/Neuro/AI VTuber.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "AI VTuber"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -48,13 +52,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "keyboard",
+                "query": "基础设施 AWS",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           },
           {
@@ -70,14 +78,26 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "0972447421cfef3d",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 362.5
+    "width": 340.5
   },
   "right": {
     "id": "246bd0838f8f40a6",
@@ -94,7 +114,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -117,10 +137,12 @@
                   "repelStrength": 13.7809244791667,
                   "linkStrength": 1,
                   "linkDistance": 30,
-                  "scale": 0.9501813006936926,
+                  "scale": 1.737146941803905,
                   "close": true
                 }
-              }
+              },
+              "icon": "lucide-git-fork",
+              "title": "配置 CUDA 的一万种方法 的关系图"
             }
           },
           {
@@ -132,7 +154,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           },
           {
@@ -141,8 +165,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md"
-              }
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md"
+              },
+              "icon": "lucide-list",
+              "title": "配置 CUDA 的一万种方法 的大纲"
             }
           },
           {
@@ -150,11 +176,23 @@
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "85e74261f30e425b",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       },
       {
         "id": "00f8f8ad2cb9f9b0",
@@ -167,7 +205,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +213,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "配置 CUDA 的一万种方法 的反向链接列表"
             }
           },
           {
@@ -184,10 +224,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
+                "file": "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "配置 CUDA 的一万种方法 的出链列表"
             }
           },
           {
@@ -198,7 +240,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           }
         ],
@@ -206,7 +250,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 366.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,61 +261,57 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
-      "random-note:开始漫游笔记": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-spaced-repetition:复习卡片": false,
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "73a9b6ff1cd4f3ff",
+  "active": "54819aae3450e1a7",
   "lastOpenFiles": [
-    "vite.config.ts.timestamp-1706288253112-5e13e31d08f07.mjs",
-    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-3.png",
-    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-2.png",
-    "笔记/🧱 基础设施/💾 TrueNAS/assets/truenas-scale-bluefin-encounters-errors-when-updating-apps-screenshot-1.png",
-    "笔记/🧱 基础设施/💾 TrueNAS/TrueNAS SCALE 发行版本 Bluefin 在更新 TrueCharts 应用时遭遇错误.md",
-    "笔记/🤖 AI 人工智能/监控和串流机器学习的进度，损失和正样本校验数值.md",
-    "笔记/🤖 AI 人工智能/用 Megatron-LM 训练一个 GPT-2.md",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-5.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-4.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-3.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-1.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets/start-from-running-a-pytorch-example-screenshot-2.png",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/assets",
-    "笔记/🤖 AI 人工智能/从零开始的机器学习之旅/1 从用 PyTorch 运行一个模型训练开始.md",
-    "笔记/🛠️ 开发/vue-vapor/嵌套 watch 和 onEffectCleanup 的另一种实现.md",
-    "笔记/🛠️ 开发/vue-vapor",
-    "笔记/📦 收集箱/📁 资源/AI 资源导航.md",
-    "笔记/📦 收集箱/🐙 GitHub 项目/xaboy/form-create.md",
-    "笔记/📦 收集箱/🐙 GitHub 项目/xaboy",
-    "笔记/📦 收集箱/🐙 GitHub 项目/mist-project/对抗 AI 绘画爬取数据的 MIST.md",
-    "笔记/📦 收集箱/🐙 GitHub 项目/mist-project",
-    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan/assets/draggan-showcase-video-1.mp4",
-    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan/assets",
-    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan/DragGAN.md",
-    "笔记/📦 收集箱/🐙 GitHub 项目/XingangPan",
-    "笔记/📦 收集箱/🐙 GitHub 项目/DLYuanGod/多模态大模型 TinyGPT-V.md",
-    "笔记/📦 收集箱/🐙 GitHub 项目/DLYuanGod",
-    "笔记/📦 收集箱/🌍 网站/镜像查询 help.mirrorz.org.md",
-    "笔记/📦 收集箱/🌍 网站/正则分析工具 Debuggex Beta.md",
-    "笔记/📦 收集箱/🌍 网站/学习全栈 AI.md",
-    "笔记/📦 收集箱/🌍 网站/学习 OpenGL.md",
-    "笔记/📦 收集箱/🌍 网站/可视化 LLM.md",
-    "笔记/📦 收集箱/🌍 网站/交互式学习 Git.md",
-    "笔记/📦 收集箱/🌍 网站/assets/debuggex-beta-screenshot-1.png.png",
-    "笔记/📦 收集箱/🌍 网站/assets",
-    "笔记/📦 收集箱/🌍 网站/2023 年排名前 10 的 AI 和 LLM 应用.md",
-    "笔记/☀️ 生活/🏠 租房/租房流程.md",
-    "笔记/☀️ 生活/🏠 租房",
-    "笔记/📦 收集箱/🌍 网站/help.mirrorz.org.md",
-    "Pasted image 20240126121238.png",
-    "笔记/🛠️ 开发/dayjs 似乎不能一次性自动导入全部的 i18n 语言配置.md",
-    "笔记/🤖 AI 人工智能/大规模分布式机器学习里的断卡重训和故障恢复.md",
-    "笔记/🤖 AI 人工智能/多机多卡训练的时候的 NCCL 错误.md",
-    "笔记/🤖 AI 人工智能/Megatron-LM 的读取 checkpoint 的错误处理问题.md",
-    "笔记/🛠️ 开发/在 macOS 上反编译一个 .NET 用的 DLL 文件.md",
-    "🔌 知识库插件列表.md",
+    "zh-CN/笔记/🤖 AI 人工智能/Neuro/AI VTuber.md",
+    "zh-CN/笔记/🤖 AI 人工智能/Neuro/Archive.zip",
+    "笔记/🧩 开源贡献/Kubernetes/CNCF Traval Funding.md",
+    "笔记/🤖 AI 人工智能/配置 CUDA 的一万种方法.md",
+    "笔记/🛠️ 开发/用 CSS 画一本好看的可以交互的 3D 书.md",
+    "node_modules/@vueuse",
+    "node_modules/@antfu",
+    "vite.config.ts.timestamp-1728465284690-0e28b7c319039.mjs",
+    "vite.config.ts.timestamp-1728464096252-aa8904c364146.mjs",
+    "pnpm-lock.yaml.2653060370",
+    "node_modules/@types",
+    "node_modules/@nolebase",
+    "node_modules/@netlify",
+    "node_modules/@iconify-json",
+    "笔记/🛠️ 开发/JS Framework Benchmark 命令速查.md",
+    "笔记/🛠️ 开发/Another Custom Directive API in Vue and Vapor.md",
+    "笔记/🛠️ 开发/因为 dayjs 不能轻松导入全部的 i18n 语言而换用了 date-fns.md",
+    "笔记/🛠️ 开发/用兼容性更好，体积更小的 Rive 渲染和播放 Lottie 动画.md",
+    "笔记/📦 收集箱/🐙 GitHub 项目/maplibre/index.md",
+    "编目 Catalog/文章/理解什么是 CRDT.md",
+    "笔记/🪄 Vtuber/在 macOS 上不同的 VTuber 直播方案.md",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122507.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231212122502.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163759.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163219.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163146.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231209163110.jpg",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233938.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233927.png",
+    "笔记/🪄 Vtuber/assets/Pasted image 20231208233632.png",
+    "笔记/🧱 基础设施/🛜 OpenWRT/assets/Pasted image 20240520003337.png",
+    "笔记/🧱 基础设施/🛜 OpenWRT/从 openclash 迁移到 sing-box.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/开发一个 Kubernetes Controller.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/将 TrueNAS 共享存储连接到 K8s 集群.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/kubectl 速查表.md",
+    "笔记/🧱 基础设施/🚢 Kubernetes/Pod 错误排查之.md",
+    "笔记/🧱 基础设施/云上集群的 GPU.md",
+    "笔记/🧮 数学/空洞的想法.md",
+    "笔记/🧩 开源贡献/Kubernetes/开始之前.md",
+    "笔记/🤖 AI 人工智能/领域/音频/配置和运行 ChatTTS.md",
+    "笔记/🤖 AI 人工智能/领域/音频/在 macOS 上配置 GPT-SoVITS-WebUI.md",
+    "笔记/🤖 AI 人工智能/通过阅读 dlrover 源码学习训练时的自动冗灾恢复和 checkpoint 同步加速.md",
+    "笔记/🤖 AI 人工智能/论文和源码解析：S-LoRA - Serving Thousands of Concurrent LoRA Adapters.md",
+    "笔记/🤖 AI 人工智能/用 FastEdit 微调大模型.md",
+    "笔记/🤖 AI 人工智能/机器学习生态研究报告.md",
+    "笔记/🤖 AI 人工智能/提示工程 Prompt Engineering/最佳实践.md",
     "未命名.canvas"
   ]
 }

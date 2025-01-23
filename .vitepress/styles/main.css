@@ -1,9 +1,7 @@
 @import 'kbd.css';
 
-html,
-body {
-  -webkit-tap-highlight-color: transparent;
-  /* 避免触屏下的点击高亮颜色 */
+html, body {
+  -webkit-tap-highlight-color: transparent; /* 避免触屏下的点击高亮颜色 */
 }
 
 /* 参考 Vitest */
@@ -93,58 +91,56 @@ body {
 }
 
 /* 首页标题样式 */
-.VPHomeHero>.container>.main>h1 {
+.VPHomeHero > .container > .main > h1 {
   font-size: 5rem;
   font-family: 'tengwarannatar-bold';
 }
 
 /* 首页子标题样式 */
-.VPHomeHero>.container>.main>.text {
+.VPHomeHero > .container > .main > .text {
   padding-top: 45px;
   font-size: 4rem;
 }
 
 /* 首页介绍样式 */
-.VPHomeHero>.container>.main>.tagline {
+.VPHomeHero > .container > .main > .tagline {
   padding-top: 24px;
 }
 
 /* 自适应样式 */
 @media (max-width: 1024px) {
-
   /* 首页标题样式 */
-  .VPHomeHero>.container>.main>h1 {
+  .VPHomeHero > .container > .main > h1 {
     font-size: 3.5rem;
   }
 
   /* 首页子标题样式 */
-  .VPHomeHero>.container>.main>.text {
+  .VPHomeHero > .container > .main > .text {
     padding-top: 30px;
     font-size: 3rem;
   }
 
   /* 首页介绍样式 */
-  .VPHomeHero>.container>.main>.tagline {
+  .VPHomeHero > .container > .main > .tagline {
     padding-top: 20px;
   }
 }
 
 /* 自适应样式 */
 @media (max-width: 640px) {
-
   /* 首页标题样式 */
-  .VPHomeHero>.container>.main>h1 {
+  .VPHomeHero > .container > .main > h1 {
     font-size: 2.5rem;
   }
 
   /* 首页子标题样式 */
-  .VPHomeHero>.container>.main>.text {
+  .VPHomeHero > .container > .main > .text {
     padding-top: 20px;
     font-size: 2rem;
   }
 
   /* 首页介绍样式 */
-  .VPHomeHero>.container>.main>.tagline {
+  .VPHomeHero > .container > .main > .tagline {
     padding-top: 20px;
   }
 }
@@ -178,7 +174,7 @@ body {
 }
 
 /* 脚注 */
-.footnotes>.footnotes-list {
+.footnotes > .footnotes-list {
   margin-top: 32px;
   opacity: 0.9;
   font-size: 12px;
@@ -186,12 +182,12 @@ body {
   font-family: sans-serif;
 }
 
-.footnotes>.footnotes-list>.footnote-item>p {
+.footnotes > .footnotes-list > .footnote-item > p {
   line-height: 18px;
 }
 
 /* 覆盖正文的 h1 标题样式 */
-.vp-doc>div>h1 {
+.vp-doc > div > h1 {
   margin-bottom: 16px;
 }
 
@@ -204,7 +200,82 @@ body {
   text-decoration: underline;
 }
 
+/**
+  Discord 链接按钮样式
+*/
 
-img {
-  object-fit: cover;
+.VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"] {
+  color: #6972d4;
+  border: 2px #6972d4 solid;
+  background-color: transparent;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:hover {
+  color: white;
+  background-color: #6975f2;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:active {
+  color: white;
+  background-color: #404eed;
+}
+
+/**
+  暗色模式下 Discord 链接按钮样式
+*/
+
+.dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"] {
+  color: #898fcf;
+  border: 2px #898fcf solid;
+  background-color: transparent;
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:hover {
+  color: white;
+  background-color: #404eed;
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://discord.gg/XuNFDcDZGj"]:active {
+  color: white;
+  background-color: #444c9e;
+}
+
+/**
+  GitHub 链接按钮样式
+*/
+
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"] {
+  color: #616161;
+  border: 2px #616161 solid;
+  background-color: transparent;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:hover {
+  color: white;
+  background-color: #4b4b4b;
+}
+
+.VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:active {
+  color: white;
+  background-color: #000;
+}
+
+/**
+  暗色模式下 GitHub 链接按钮样式
+*/
+
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"] {
+  color: #a4a4a4;
+  border: 2px #a4a4a4 solid;
+  background-color: transparent
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:hover {
+  color: white;
+  background-color: #252525;
+}
+
+.dark .VPHero.VPHomeHero .actions a[href="https://github.com/nolebase/nolebase"]:active {
+  color: white;
+  background-color: #4b4b4b;
 }
