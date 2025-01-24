@@ -139,7 +139,7 @@ sudo lsof /var/lib/dpkg/lock-frontend
 ```html
 <Gallery title="SPY x FAMILY 間諜家家酒" creator="遠藤達哉" href="https://ani.gamer.com.tw/animeVideo.php?sn=28798" linkText="前往观看" disableNewline>
   <template #image>
-    <img src="./🪄ACG//🎞️动画/assets/2022-间谍家家酒.jpg" />
+    <img src="./🪄ACG/🎞️动画/assets/2022-间谍家家酒.jpg" />
   </template>
    <template #describe>
 每一个人都拥有不想让任何人看见得自己的一面―― 位在世界各国于台面下进行激烈情报战的时代。东国与西国已经维持了数十年的冷战状态。所属西国情报局对东课WISE 厉害的间谍〈黄昏〉，为了前往找寻被誉为是会威胁到东西国和平的危险人物，东国的国家统一党总裁唐纳文・戴斯蒙德所正在筹备的战争计画，被赋予了一项极秘任务。其名称为 Operation〈枭〉。内容讲述「在一周内组建家庭，并潜入戴斯蒙德儿子所就读的学校吧」。但是，他所遇到的「女儿」是会读心的超能力者、「妻子」则是暗杀者！为了互相的利益而成为家庭，决定在隐藏真实身分的情况下共同生活的 3 人。世界的和平就托付即将发生一系列事件的暂定的家庭…？
@@ -159,7 +159,7 @@ sudo lsof /var/lib/dpkg/lock-frontend
 
 <Gallery title="SPY x FAMILY 間諜家家酒" creator="遠藤達哉" href="https://ani.gamer.com.tw/animeVideo.php?sn=28798" linkText="前往观看" disableNewline>
   <template #image>
-    <img src="./🪄ACG/🎞️动画/assets/2022-间谍家家酒.jpg" />
+    <img src="./🪄 ACG/🎞️动画/assets/2022-间谍家家酒.jpg" />
   </template>
    <template #describe>
 每一个人都拥有不想让任何人看见得自己的一面―― 位在世界各国于台面下进行激烈情报战的时代。东国与西国已经维持了数十年的冷战状态。所属西国情报局对东课WISE 厉害的间谍〈黄昏〉，为了前往找寻被誉为是会威胁到东西国和平的危险人物，东国的国家统一党总裁唐纳文・戴斯蒙德所正在筹备的战争计画，被赋予了一项极秘任务。其名称为 Operation〈枭〉。内容讲述「在一周内组建家庭，并潜入戴斯蒙德儿子所就读的学校吧」。但是，他所遇到的「女儿」是会读心的超能力者、「妻子」则是暗杀者！为了互相的利益而成为家庭，决定在隐藏真实身分的情况下共同生活的 3 人。世界的和平就托付即将发生一系列事件的暂定的家庭…？
