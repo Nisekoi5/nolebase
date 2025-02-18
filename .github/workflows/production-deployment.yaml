@@ -31,10 +31,10 @@ jobs:
           node-version: 20.x
 
       - name: 安装 pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           run_install: false
-          version: 8
+          version: 9
 
       - name: 获取 pnpm store 目录
         shell: bash
