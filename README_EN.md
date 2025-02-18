@@ -367,7 +367,7 @@ After completing the configuration, it should look like this:
 ![](/public/obsidian-screenshot-1-EN.png)
 
 > [!TIP]
-> By default, the [Bi-Directional Links (for markdown-it)](https://nolebase-integrations.ayaka.io/pages/en/integrations/markdown-it-bi-directional-links/) included with Nólëbase will automatically handle all [[link]] and ![[link]] bi-directional links supported by Obsidian.
+> By default, the [Bi-Directional Links (for markdown-it)](https://nolebase-integrations.ayaka.io/pages/en/integrations/markdown-it-bi-directional-links/) included with Nólëbase will automatically handle all `[[link]]` and !`[[link]]` bi-directional links supported by Obsidian.
 > However, there are situations where you might want to avoid the appearance or usage of bi-directional links, such as:
 >
 > 1. Compatibility in Markdown: This allows the document to be properly rendered on GitHub (since GitHub cannot parse `[[wikilinks]]`).
