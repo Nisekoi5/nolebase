@@ -10,7 +10,7 @@ export const siteDescription = '记录回忆，知识和畅想的地方'
 export const include = ['笔记', '生活']
 
 /** Repo */
-export const githubRepoLink = 'https://github.com/nolebase/nolebase'
+export const githubRepoLink = 'https://github.com/Nisekoi5/nolebase'
 /** Discord */
 export const discordLink = 'https://discord.gg/XuNFDcDZGj'
 
