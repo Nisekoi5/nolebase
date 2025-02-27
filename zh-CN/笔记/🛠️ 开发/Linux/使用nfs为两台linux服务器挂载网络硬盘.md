@@ -1,10 +1,9 @@
 ---
 tags:
   - nfs
-  - 挂载
 ---
 
-# 简单的安装和使用NFS来共享存储空间
+# 使用NFS来共享存储空间
 
 NFS全称`Network File System(网络文件系统)`,常用于两台VPS内网保存数据或者备份，比如一台高性能VPS，一台存储型VPS。
 
