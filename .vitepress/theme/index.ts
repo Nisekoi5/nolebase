@@ -28,7 +28,7 @@ const nolebase = presetClient<{
         hoverBlockColor: 'rgb(240 197 52 / 7%)',
       },
     },
-  }
+  },
 })
 
 const ExtendedTheme: Theme = {

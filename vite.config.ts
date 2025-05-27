@@ -1,5 +1,5 @@
-import { presetVite } from '@nolebase/integrations/vitepress/vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { presetVite } from '@nolebase/integrations/vitepress/vite'
 import { join } from 'node:path'
 import UnoCSS from 'unocss/vite'
 
