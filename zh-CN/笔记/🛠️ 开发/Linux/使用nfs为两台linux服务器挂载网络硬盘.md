@@ -48,6 +48,11 @@ mkdir /home/share
 | no_root_squash   | 远程root用户保持root权限，存在安全风险（仅限受信环境使用） |
 | root_squash  | 将远程root用户映射为匿名用户(通常是 nobody)，提升安全性  |
 
+设置完之后需要重启服务端
+
+```shell
+systemctl restart nfs-kernel-server
+```
 
 ## 挂载目录
 其中`1.1.1.0`是服务端IP, `/data` 是设置的导出目录 `/mnt/data` 是挂载目录
