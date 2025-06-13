@@ -1,6 +1,7 @@
 import type { Theme } from 'vitepress'
 
 import { presetClient } from '@nolebase/integrations/vitepress/client'
+import { LayoutMode } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 
@@ -21,7 +22,7 @@ const nolebase = presetClient<{
   enhancedReadabilities: {
     options: {
       layoutSwitch: {
-        defaultMode: 4,
+        defaultMode: LayoutMode.SidebarWidthAdjustableOnly,
       },
       spotlight: {
         defaultToggle: true,
@@ -62,7 +63,6 @@ const ExtendedTheme: Theme = {
      * Learn more at: Warn `Hydration completed but contains mismatches.` and Custom components are not rendered · Issue #1918 · vuejs/vitepress
      * https://github.com/vuejs/vitepress/issues/1918
      */
-
     await nolebase?.enhanceApp?.(ctx)
 
     app.component('HomePage', HomePage)
