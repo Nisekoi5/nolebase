@@ -62,11 +62,17 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  /* 主色 */
   --vp-c-brand-1: var(--vp-c-sky-1);
   --vp-c-brand-2: var(--vp-c-sky-2);
   --vp-c-brand-3: var(--vp-c-sky-3);
   --vp-c-brand-soft: var(--vp-c-sky-soft);
+  --vp-c-tip-1: #1ba6f6;
+  --vp-badge-tip-bg: #b8e5ff75;
+}
+
+.dark:root {
+  --vp-c-tip-1: #75c8f7;
+  --vp-badge-tip-bg: #0e5c8975;
 }
 
 /**
@@ -76,16 +82,24 @@
 :root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
+    -45deg,
     #8d6fc7 40%,
-    #4fc4d8
+    #572fbd
   );
   --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #8d73bf90 30%,
-    #d6c0e890
+    180deg,
+    #d9c9f6 25%,
+    #c4bbd3
   );
   --vp-home-hero-image-filter: blur(30px);
+}
+
+.dark:root {
+  --vp-home-hero-image-background-image: linear-gradient(
+    180deg,
+    #402661 30%,
+    #000000
+  )
 }
 
 @media (min-width: 640px) {
@@ -103,18 +117,12 @@
 /**
  * Component: Badge
  * -------------------------------------------------------------------------- */
-:root {
-  /* 配置一下 tips 的自定义块的颜色为非默认的产品色，避免与文字不兼容导致可读性下降 */
-  --vp-custom-block-tip-bg: #def4f4;
-  --vp-custom-block-tip-code-bg: #cbd9dd7d;
+ :root {
+  --vp-custom-block-tip-bg: #deedf4;
+  --vp-custom-block-tip-code-bg: #cfd2d57d;
 }
 
 .dark:root {
-  /* 配置一下在暗色模式下 tips 的自定义块的颜色为非默认的产品色，避免与文字不兼容导致可读性下降 */
-  --vp-custom-block-tip-bg: #02474e;
-  --vp-custom-block-tip-code-bg: #0d1e1e9c;
-}
-
-:root {
-  --vp-nolebase-highlight-targeted-heading-bg: rgba(253, 216, 95, 0.31);
+  --vp-custom-block-tip-bg: #074364;
+  --vp-custom-block-tip-code-bg: #0d171e9c;
 }
