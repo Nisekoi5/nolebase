@@ -88,5 +88,6 @@ Standby Z   0             9000          9000         110           Y Y
 
 [^1]:https://www.bilibili.com/opus/847759800462737445
 [^2]:https://www.reddit.com/r/truenas/comments/p1ebnf/comment/jjbjrfb/
+[^3]:https://www.bilibili.com/opus/711333961215770630
 
 
