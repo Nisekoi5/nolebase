@@ -1,8 +1,8 @@
 # 📒 笔记
 
-## 小音和猫猫的知识库
+## Nólëbase的知识库
 
-欢迎来到小音和猫猫的知识库 [Nólëbase](https://nolebase.ayaka.io)，这里是 📒 笔记分区
+本网站使用开源的VitePress和[Nólëbase](https://nolebase.ayaka.io)主题构建和部署。
 
 ## 想要自己部署和在本地启动强大的 Nólëbase 知识库，或者自己拥有一份？
 

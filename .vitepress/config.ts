@@ -4,7 +4,7 @@ import { calculateSidebar } from '@nolebase/vitepress-plugin-sidebar'
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { defineConfig } from 'vitepress'
-import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
+// import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 
 import { discordLink, githubRepoLink, siteDescription, siteName } from '../metadata'

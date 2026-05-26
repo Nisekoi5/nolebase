@@ -166,6 +166,10 @@ sudo lsof /var/lib/dpkg/lock-frontend
    </template>
 </Gallery>
 
+## Badge 徽标
+
+使用方法参考[VitePress官方文档](https://vitepress.dev/zh/reference/default-theme-badge#usage)
+
 ## Markdown原生语法
 
 这里只只列出一些常用的
