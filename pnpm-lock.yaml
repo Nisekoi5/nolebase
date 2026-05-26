@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  '@nolebase/vitepress-plugin-thumbnail-hash':
-    hash: a727d99e99d18775fcec20c4569a76a10a13b599b62cd0422439bc20beaa52d0
-    path: patches/@nolebase__vitepress-plugin-thumbnail-hash.patch
-
 importers:
 
   .:
@@ -79,7 +74,7 @@ importers:
         version: 2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))
       '@nolebase/vitepress-plugin-thumbnail-hash':
         specifier: ^2.18.2
-        version: 2.18.2(patch_hash=a727d99e99d18775fcec20c4569a76a10a13b599b62cd0422439bc20beaa52d0)(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))
+        version: 2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -5692,7 +5687,7 @@ snapshots:
       '@nolebase/vitepress-plugin-index': 2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))
       '@nolebase/vitepress-plugin-inline-link-preview': 2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))(vue@3.5.34(typescript@6.0.3))
       '@nolebase/vitepress-plugin-page-properties': 2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))(vue@3.5.34(typescript@6.0.3))
-      '@nolebase/vitepress-plugin-thumbnail-hash': 2.18.2(patch_hash=a727d99e99d18775fcec20c4569a76a10a13b599b62cd0422439bc20beaa52d0)(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))
+      '@nolebase/vitepress-plugin-thumbnail-hash': 2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))
       defu: 6.1.7
     optionalDependencies:
       vite: 8.0.14(@types/node@25.9.1)(esbuild@0.28.0)(jiti@2.7.0)(less@4.6.4)(tsx@4.22.3)(yaml@2.9.0)
@@ -5862,7 +5857,7 @@ snapshots:
       tinyglobby: 0.2.16
       vitepress: 2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0)
 
-  '@nolebase/vitepress-plugin-thumbnail-hash@2.18.2(patch_hash=a727d99e99d18775fcec20c4569a76a10a13b599b62cd0422439bc20beaa52d0)(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))':
+  '@nolebase/vitepress-plugin-thumbnail-hash@2.18.2(vitepress@2.0.0-alpha.6(@algolia/client-search@5.52.1)(@types/node@25.9.1)(change-case@5.4.4)(jiti@2.7.0)(jwt-decode@4.0.0)(less@4.6.4)(lightningcss@1.32.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.15)(search-insights@2.17.3)(tsx@4.22.3)(typescript@6.0.3)(yaml@2.9.0))':
     dependencies:
       '@unlazy/vue': 0.12.4
       canvaskit-wasm: 0.40.0
