@@ -97,7 +97,7 @@ jobs:
 
       - name: 推送到 Netlify
         timeout-minutes: 10
-        run: netlify deploy --dir .vitepress/dist --prod
+        run: netlify deploy --dir .vitepress/dist --prod --no-build
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
