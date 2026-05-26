@@ -1,18 +1,16 @@
 import { presetMarkdownIt } from '@nolebase/integrations/vitepress/markdown-it'
 import { transformHeadMeta } from '@nolebase/vitepress-plugin-meta'
 import { calculateSidebar } from '@nolebase/vitepress-plugin-sidebar'
-// import { buildEndGenerateOpenGraphImages } from '@nolebase/vitepress-plugin-og-image/vitepress'
-// import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
-// import { NolebaseUnlazyImg } from "@nolebase/vitepress-plugin-thumbnail-hash/client"
 import MarkdownItFootnote from 'markdown-it-footnote'
 import MarkdownItMathjax3 from 'markdown-it-mathjax3'
 import { defineConfig } from 'vitepress'
+import { UnlazyImages } from '@nolebase/markdown-it-unlazy-img'
 
 
 import { discordLink, githubRepoLink, siteDescription, siteName } from '../metadata'
 import head from './head'
 
-const nolebase = presetMarkdownIt({ unlazyImages: { options: { imgElementTag: "NolebaseUnlazyImg" } } })
+const nolebase = presetMarkdownIt()
 
 export default defineConfig({
   vue: {
@@ -123,7 +121,7 @@ export default defineConfig({
         },
         sidebar: calculateSidebar([
           { folderName: 'zh-CN/笔记', separate: true },
-          { folderName: 'zh-CN/编目 Catalog', separate: true },
+          // { folderName: 'zh-CN/编目 Catalog', separate: true },
         ], 'zh-CN'),
         footer: {
           message: '用 <span style="color: #e25555;">&#9829;</span> 撰写',
