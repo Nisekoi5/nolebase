@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { computed, getCurrentInstance, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { inBrowser } from 'vitepress'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { inBrowser, useRouter } from 'vitepress'
+
+interface ImageItem {
+  src: string
+  alt?: string
+}
+
 interface Props {
-  modelValue?: boolean
   src?: string
   alt?: string
+  images?: Array<string | ImageItem>
 }
 
 type ActivatorProps = {
@@ -12,31 +18,48 @@ type ActivatorProps = {
 }
 
 const props = defineProps<Props>()
-const emit = defineEmits<{
-  'update:modelValue': [value: boolean]
-}>()
+const router = useRouter()
+const visible = defineModel<boolean>({ default: false })
+const indexModel = defineModel<number>('index', { default: 0 })
 
-const instance = getCurrentInstance()
-const isControlled = computed(() =>
-  Object.prototype.hasOwnProperty.call(instance?.vnode.props ?? {}, 'modelValue'),
-)
-
-const innerValue = ref(false)
-const visible = computed(() =>
-  isControlled.value ? Boolean(props.modelValue) : innerValue.value,
-)
-
-function setVisible(value: boolean) {
-  if (isControlled.value) {
-    emit('update:modelValue', value)
+const normalizedImages = computed<ImageItem[]>(() => {
+  if (props.images?.length) {
+    return props.images.map(image =>
+      typeof image === 'string' ? { src: image } : image,
+    )
   }
-  else {
-    innerValue.value = value
+
+  return props.src ? [{ src: props.src, alt: props.alt }] : []
+})
+
+function clampIndex(value: number) {
+  // 如果index小于0或者大于数组长度。则跳到开头或者结尾
+  if (value < 0) {
+    return normalizedImages.value.length - 1
+  } else if (value >= normalizedImages.value.length) {
+    return 0
   }
+  return value
 }
 
+function setCurrentIndex(value: number) {
+  indexModel.value = clampIndex(value)
+}
+
+const currentImage = computed<ImageItem>(() =>
+  normalizedImages.value[indexModel.value]!
+)
+
+const canRenderImage = computed(() => Boolean(currentImage.value?.src))
+const hasMultipleImages = computed(() => normalizedImages.value.length > 1)
+
+function setVisible(value: boolean) {
+  visible.value = value
+}
+
+
+
 const dialogRef = ref<HTMLDivElement | null>(null)
-const canRenderImage = computed(() => Boolean(props.src))
 
 const scrollState = {
   x: 0,
@@ -51,8 +74,6 @@ const scrollState = {
   htmlOverflow: '',
   htmlOverscrollBehavior: '',
 }
-
-let hasDialogRouteEntry = false
 
 function lockScroll() {
   if (!inBrowser) return
@@ -101,58 +122,81 @@ function unlockScroll() {
   window.scrollTo(scrollState.x, scrollState.y)
 }
 
-async function pushDialogRoute() {
-  // 如果已经打开了当前Dialog了
-  if (hasDialogRouteEntry) return
-
-  hasDialogRouteEntry = true
-
-  history.replaceState({ scrollPosition: window.scrollY }, '')
-  const state = { id: 'stopBack' }
-  history.pushState(state, '', window.location.href)
-  setVisible(true)
+let isDialogActive = false
+router.onBeforePageLoad = () => {
+  if (isDialogActive) {
+    isDialogActive = false
+    close()
+    return false
+  }
+  return true
 }
 
 function open() {
-  if (!props.src) return
-  // 如果已激活了就返回避免重复弹出添加多个记录
-  if (visible.value) return
-  void pushDialogRoute()
+  if (!canRenderImage.value || visible.value) return
+
+  // 插入一个hash路由用于模拟拦截后退操作
+  history.replaceState({ scrollPosition: window.scrollY }, '')
+  const url = new URL(location.href)
+  url.hash = '#dialog'
+  history.pushState({}, '', url.href)
+  isDialogActive = true
+  setVisible(true)
 }
 
 function close() {
   setVisible(false)
-
-  if (hasDialogRouteEntry) {
-    hasDialogRouteEntry = false
-    window.history.back()
-  }
 }
 
-// 点击视口外关闭
+function prevImage() {
+  if (!hasMultipleImages.value) return
+  setCurrentIndex(indexModel.value - 1)
+}
+
+function nextImage() {
+  if (!hasMultipleImages.value) return
+  setCurrentIndex(indexModel.value + 1)
+}
+
 function handleBackdropClick(event: MouseEvent) {
   if (event.target === dialogRef.value) {
-    close()
+    history.back()
   }
 }
 
 function handleKeydown(event: KeyboardEvent) {
+  if (!visible.value) return
+
   if (event.key === 'Escape') {
     event.preventDefault()
-    close()
+    history.back()
+    return
+  }
+
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault()
+    prevImage()
+    return
+  }
+
+  if (event.key === 'ArrowRight') {
+    event.preventDefault()
+    nextImage()
   }
 }
 
 const activatorProps = computed<ActivatorProps>(() => ({
-  onClick: open
+  onClick: open,
 }))
+
 
 watch(
   visible,
   (newValue) => {
     if (newValue) {
       lockScroll()
-    } else {
+    }
+    else {
       unlockScroll()
     }
   },
@@ -163,15 +207,14 @@ onMounted(() => {
   if (inBrowser) {
     window.addEventListener('keydown', handleKeydown)
   }
-
 })
+
 onBeforeUnmount(() => {
   if (inBrowser) {
     window.removeEventListener('keydown', handleKeydown)
   }
   if (visible.value) unlockScroll()
 })
-
 </script>
 
 <template>
@@ -179,14 +222,27 @@ onBeforeUnmount(() => {
 
   <Teleport to="body">
     <div v-show="visible" ref="dialogRef" class="product-image-dialog" role="dialog" aria-modal="true"
-      :aria-label="alt || '商品图片预览'" @click="handleBackdropClick">
-      <button class="product-image-dialog-close" type="button" aria-label="关闭图片预览" @click="close">
-      <span>
-        ×
-      </span>
+      :aria-label="currentImage?.alt || alt || 'Image preview'" @click="handleBackdropClick">
+      <button v-if="hasMultipleImages" class="product-image-dialog-nav product-image-dialog-nav-prev" type="button"
+        aria-label="Previous image" @click.stop="prevImage">
+        <span>&lsaquo;</span>
       </button>
 
-      <img v-if="canRenderImage" class="product-image-dialog-img" :src="src" :alt="alt || '商品图片'" />
+      <button v-if="hasMultipleImages" class="product-image-dialog-nav product-image-dialog-nav-next" type="button"
+        aria-label="Next image" @click.stop="nextImage">
+        <span>&rsaquo;</span>
+      </button>
+
+      <button class="product-image-dialog-close" type="button" aria-label="Close image preview" @click="close">
+        <span>&times;</span>
+      </button>
+
+      <div v-if="hasMultipleImages" class="product-image-dialog-count">
+        {{ indexModel + 1 }} / {{ normalizedImages.length }}
+      </div>
+
+      <img v-if="canRenderImage" class="product-image-dialog-img" :src="currentImage?.src"
+        :alt="currentImage?.alt || alt || 'Image'">
     </div>
   </Teleport>
 </template>
@@ -217,6 +273,47 @@ onBeforeUnmount(() => {
   font-size: 24px;
   line-height: 1;
   cursor: pointer;
+}
+
+.product-image-dialog-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(20, 20, 22, 0.72);
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+
+}
+
+.product-image-dialog-nav span,
+.product-image-dialog-close span {
+  vertical-align: text-top;
+}
+
+.product-image-dialog-nav-prev {
+  left: 16px;
+}
+
+.product-image-dialog-nav-next {
+  right: 16px;
+}
+
+.product-image-dialog-count {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(20, 20, 22, 0.72);
+  color: #fff;
+  font-size: 12px;
 }
 
 .product-image-dialog-img {
