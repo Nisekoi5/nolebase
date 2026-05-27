@@ -215,6 +215,7 @@ function selectImage(index: number) {
             <div v-if="tags.length" class="product-tags">
                 <span v-for="tag in tags" :key="tag.label" class="product-tag" :style="tag.style">{{ tag.label }}</span>
             </div>
+            <p v-if="notes" class="product-notes">{{ notes }}</p>
 
             <div v-if="expanded" class="product-detail">
                 <table v-if="detailRows.length" class="product-table">
@@ -230,7 +231,6 @@ function selectImage(index: number) {
                         </tr>
                     </tbody>
                 </table>
-                <p v-if="notes" class="product-notes">{{ notes }}</p>
             </div>
 
             <button v-if="hasMoreImages || detailRows.length || notes" class="product-toggle" :aria-expanded="expanded"
