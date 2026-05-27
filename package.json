@@ -19,7 +19,7 @@
     "vitepress-doc"
   ],
   "scripts": {
-    "dev": "pnpm run docs:dev",
+    "dev": "pnpm run docs:dev  --host 0.0.0.0",
     "build": "pnpm run docs:build",
     "serve": "pnpm run docs:serve",
     "docs:dev": "vitepress dev",

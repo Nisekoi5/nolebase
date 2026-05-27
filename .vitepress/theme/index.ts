@@ -10,6 +10,7 @@ import DocFooter from './components/DocFooter.vue'
 import Gallery from './components/Gallery'
 import HomePage from './components/HomePage.vue'
 import Share from './components/Share.vue'
+import Product from './components/product.vue'
 
 import 'virtual:uno.css'
 import '../styles/main.css'
@@ -70,6 +71,7 @@ const ExtendedTheme: Theme = {
     app.component('Share', Share)
     app.component('AppContainer', AppContainer)
     app.component('Gallery', Gallery)
+    app.component('Product', Product)
 
   },
 }

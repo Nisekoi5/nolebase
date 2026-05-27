@@ -11,7 +11,7 @@ interface ProductImage {
 
 interface ProductTag {
     label: string
-    cls: string
+    style: Record<string, string>
 }
 
 interface ProductStatusMeta {
@@ -26,7 +26,41 @@ interface ProductDetailRow {
     isLink?: boolean
 }
 
+const TAG_COLOR_PAIRS = [
+    {
+        lightBg: '#eef6ff',
+        lightText: '#2563b0',
+        darkBg: '#1e2d42',
+        darkText: '#93c5fd'
+    },
+    {
+        lightBg: '#f0edfe',
+        lightText: '#5b21b6',
+        darkBg: '#2a2040',
+        darkText: '#c4b5fd'
+    },
+    {
+        lightBg: '#fff4e6',
+        lightText: '#b45309',
+        darkBg: '#2d1e0a',
+        darkText: '#fbbf24'
+    },
+    {
+        lightBg: '#fff1e8',
+        lightText: '#b4491e',
+        darkBg: '#0c2318',
+        darkText: '#6ee7b7'
+    },
+    {
+        lightBg: '#eaf4ff',
+        lightText: '#225ea8',
+        darkBg: '#16283d',
+        darkText: '#8ec5ff'
+    }
+] as const
+
 interface Props {
+
     // 商品名称（必填）
     name: string
     /** 品牌或店铺名 */
@@ -47,14 +81,22 @@ interface Props {
     season?: string
     /** 材质，如 100% 棉 */
     material?: string
+    /** 厚度，如100g */
+    thickness?: string
+    /** 鞋跟高度 */
+    height?: string
     /** 购买链接 URL */
     link?: string
     /** 图片列表，多图时显示缩略图 */
     images?: ProductImage[]
     /** 备注说明 */
     notes?: string
-}
+    /** 图片比例 */
+    aspectRatio?: number
+    /** 扩展字段 */
+    extraDetailRows?: ProductDetailRow[]
 
+}
 const props = withDefaults(defineProps<Props>(), {
     brand: '',
     price: null,
@@ -66,7 +108,9 @@ const props = withDefaults(defineProps<Props>(), {
     material: '',
     link: '',
     images: () => [],
-    notes: ''
+    notes: '',
+    aspectRatio: 4 / 3,
+    extraDetailRows: () => []
 })
 
 const expanded = ref(false)
@@ -80,26 +124,48 @@ const statusMap: Record<ProductStatus, ProductStatusMeta> = {
 
 const currentStatus = computed<ProductStatusMeta>(() => statusMap[props.status])
 
+function createTagStyle(index: number) {
+    const pair = TAG_COLOR_PAIRS[index % TAG_COLOR_PAIRS.length]
+    return {
+        '--product-tag-bg': pair.lightBg,
+        '--product-tag-text': pair.lightText,
+        '--product-tag-bg-dark': pair.darkBg,
+        '--product-tag-text-dark': pair.darkText
+    } as Record<string, string>
+}
+
 const tags = computed<ProductTag[]>(() =>
     [
-        props.size && { label: props.size, cls: 'tag-size' },
-        props.color && { label: props.color, cls: 'tag-color' },
-        props.season && { label: props.season, cls: 'tag-season' },
-        props.material && { label: props.material, cls: 'tag-material' },
-        props.store && { label: props.store, cls: 'tag-store' }
-    ].filter((tag): tag is ProductTag => Boolean(tag))
+        props.size,
+        props.color,
+        props.season,
+        props.material,
+        props.store,
+        props.thickness,
+        props.height,
+        ...props.extraDetailRows.map(row => row.value)
+    ]
+        .filter((label): label is string => Boolean(label))
+        .map((label, index) => ({
+            label,
+            style: createTagStyle(index)
+        }))
 )
 
-const detailRows = computed<ProductDetailRow[]>(() =>
-    [
+const detailRows = computed<ProductDetailRow[]>(() => {
+    const builtInRows = [
         props.size && { key: 'size', label: '尺码', value: props.size },
         props.color && { key: 'color', label: '颜色', value: props.color },
         props.season && { key: 'season', label: '季节', value: props.season },
         props.material && { key: 'material', label: '材质', value: props.material },
+        props.thickness && { key: 'thickness', label: '厚度', value: props.thickness },
+        props.height && { key: 'height', label: '跟高', value: props.height },
         props.store && { key: 'store', label: '平台', value: props.store },
         props.link && { key: 'link', label: '链接', value: props.link, isLink: true }
     ].filter((row): row is ProductDetailRow => Boolean(row))
-)
+
+    return [...builtInRows, ...props.extraDetailRows]
+})
 
 const hasImages = computed(() => props.images.length > 0)
 const hasMoreImages = computed(() => props.images.length > 1)
@@ -108,19 +174,13 @@ const currentImage = computed<ProductImage | null>(() => props.images[activeInde
 function selectImage(index: number) {
     activeIndex.value = index
 }
-
 </script>
 
 <template>
     <div class="product-card my-4">
-        <!-- 预览图片 -->
-        <div class="product-img-wrap">
-            <ProductImageDialog
-                v-if="hasImages"
-                v-model:index="activeIndex"
-                :images="images"
-                :alt="currentImage?.alt || name"
-            >
+        <div class="product-img-wrap" :style="{ aspectRatio: props.aspectRatio }">
+            <ProductImageDialog v-if="hasImages" v-model:index="activeIndex" :images="images"
+                :alt="currentImage?.alt || name">
                 <template #activator="{ props: activatorProps }">
                     <img :src="currentImage?.src" :alt="currentImage?.alt || name" class="product-main-img"
                         v-bind="activatorProps" />
@@ -133,11 +193,9 @@ function selectImage(index: number) {
                 </svg>
             </div>
 
-            <!-- 购买状态 -->
             <span class="product-badge" :class="currentStatus.cls">{{ currentStatus.label }}</span>
         </div>
 
-        <!-- Thumbnail strip (visible when expanded or >1 image) -->
         <div v-if="hasMoreImages && expanded" class="product-thumbs">
             <button v-for="(img, i) in images" :key="i" class="product-thumb" :class="{ active: activeIndex === i }"
                 :aria-label="`查看第 ${i + 1} 张图片`" @click="selectImage(i)">
@@ -145,7 +203,6 @@ function selectImage(index: number) {
             </button>
         </div>
 
-        <!-- Info body -->
         <div class="product-body">
             <div class="product-header">
                 <div>
@@ -155,12 +212,10 @@ function selectImage(index: number) {
                 <span v-if="price !== null" class="product-price">{{ currency }} {{ price }}</span>
             </div>
 
-            <!-- Tags -->
             <div v-if="tags.length" class="product-tags">
-                <span v-for="tag in tags" :key="tag.label" class="product-tag" :class="tag.cls">{{ tag.label }}</span>
+                <span v-for="tag in tags" :key="tag.label" class="product-tag" :style="tag.style">{{ tag.label }}</span>
             </div>
 
-            <!-- Expandable detail -->
             <div v-if="expanded" class="product-detail">
                 <table v-if="detailRows.length" class="product-table">
                     <tbody>
@@ -178,9 +233,8 @@ function selectImage(index: number) {
                 <p v-if="notes" class="product-notes">{{ notes }}</p>
             </div>
 
-            <!-- Expand toggle -->
-            <button v-if="hasMoreImages || notes || link || material || store" class="product-toggle"
-                :aria-expanded="expanded" @click="expanded = !expanded">
+            <button v-if="hasMoreImages || detailRows.length || notes" class="product-toggle" :aria-expanded="expanded"
+                @click="expanded = !expanded">
                 {{ expanded ? '收起' : '查看更多' }}
                 <svg class="product-chevron" :class="{ flipped: expanded }" width="12" height="12" viewBox="0 0 12 12"
                     fill="none">
@@ -217,7 +271,6 @@ function selectImage(index: number) {
     transform: translateY(-1px);
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
     .product-card {
         --product-border: 1px solid #2e2e2e;
@@ -228,7 +281,6 @@ function selectImage(index: number) {
     }
 }
 
-/* VitePress dark class override */
 .dark .product-card {
     --product-border: 1px solid #2e2e2e;
     --product-bg: #1c1c1e;
@@ -237,11 +289,10 @@ function selectImage(index: number) {
     --product-muted: #888;
 }
 
-/* Image area */
 .product-img-wrap {
     background: var(--product-bg-img);
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1;
     position: relative;
     display: flex;
     align-items: center;
@@ -256,6 +307,10 @@ function selectImage(index: number) {
     display: block;
     cursor: zoom-in;
     transition: transform 0.3s ease;
+    /* image-rendering: crisp-edges; */
+    /* 备用方案，部分旧浏览器支持 */
+    will-change: transform;
+
 }
 
 .product-card:hover .product-main-img {
@@ -271,7 +326,6 @@ function selectImage(index: number) {
     height: 100%;
 }
 
-/* Badge */
 .product-badge {
     position: absolute;
     top: 10px;
@@ -340,7 +394,6 @@ function selectImage(index: number) {
     border-color: #3a3a3a;
 }
 
-/* Thumbnails */
 .product-thumbs {
     display: flex;
     gap: 6px;
@@ -379,7 +432,6 @@ function selectImage(index: number) {
     border-color: var(--product-accent);
 }
 
-/* Body */
 .product-body {
     padding: 14px 16px 12px;
 }
@@ -415,7 +467,6 @@ function selectImage(index: number) {
     flex-shrink: 0;
 }
 
-/* Tags */
 .product-tags {
     display: flex;
     flex-wrap: wrap;
@@ -424,63 +475,30 @@ function selectImage(index: number) {
 }
 
 .product-tag {
+    --product-tag-bg: #eef6ff;
+    --product-tag-text: #2563b0;
+    --product-tag-bg-dark: #1e2d42;
+    --product-tag-text-dark: #93c5fd;
     font-size: 11px;
     padding: 1px 10px;
     border-radius: 999px;
     font-weight: 500;
+    background: var(--product-tag-bg);
+    color: var(--product-tag-text);
 }
 
-.tag-size {
-    background: #eef6ff;
-    color: #2563b0;
+@media (prefers-color-scheme: dark) {
+    .product-tag {
+        background: var(--product-tag-bg-dark);
+        color: var(--product-tag-text-dark);
+    }
 }
 
-.tag-color {
-    background: #f0edfe;
-    color: #5b21b6;
+.dark .product-tag {
+    background: var(--product-tag-bg-dark);
+    color: var(--product-tag-text-dark);
 }
 
-.tag-season {
-    background: #fff4e6;
-    color: #b45309;
-}
-
-.tag-material {
-    background: #FFF1E8;
-    color: #B4491E;
-}
-
-.tag-store {
-    background: #EAF4FF;
-    color: #225EA8;
-}
-
-.dark .tag-size {
-    background: #1e2d42;
-    color: #93c5fd;
-}
-
-.dark .tag-color {
-    background: #2a2040;
-    color: #c4b5fd;
-}
-
-.dark .tag-season {
-    background: #2d1e0a;
-    color: #fbbf24;
-}
-
-.dark .tag-material {
-    background: #0c2318;
-    color: #6ee7b7;
-}
-
-.dark .tag-store {
-    background: #16283D;
-    color: #8EC5FF;
-}
-
-/* Detail table */
 .product-detail {
     margin-top: 4px;
     margin-bottom: 8px;
@@ -499,8 +517,6 @@ function selectImage(index: number) {
     }
 }
 
-
-
 .product-td-key {
     color: var(--product-muted);
     width: 64px;
@@ -509,12 +525,6 @@ function selectImage(index: number) {
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
-
-
-
-
-
-
 
 .product-notes {
     font-size: 12px;
@@ -526,7 +536,6 @@ function selectImage(index: number) {
     border-radius: 8px;
 }
 
-/* Toggle */
 .product-toggle {
     display: flex;
     align-items: center;
@@ -538,6 +547,7 @@ function selectImage(index: number) {
     padding: 0;
     cursor: pointer;
     margin-top: 6px;
+    margin-left: auto;
     transition: color 0.15s;
 }
 
