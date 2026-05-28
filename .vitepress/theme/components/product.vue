@@ -520,7 +520,7 @@ function selectImage(index: number) {
 .product-td-key {
     color: var(--product-muted);
     width: 64px;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
